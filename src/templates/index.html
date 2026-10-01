@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Pulmu is a virtual magazine and a personal project</h1>
+    {% for post in posts %}
+    <div><p> {{ post }} </p></div>
+    {% endfor %}
+{% endblock %}
