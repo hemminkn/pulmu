@@ -8,8 +8,11 @@
         {% endif %}
     </head>
     <body>
-        <div>Pulmu: <a href="/index">Home</a></div>
-        <hr>
+        <div>
+            Pulmu:
+            <a href="{{ url_for('index') }}">Home</a>
+        </div>
+        <hr> <!-- line -->
         {% block content %}{% endblock %}
     </body>
 </html>
