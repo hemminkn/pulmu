@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<head>
+<link rel="stylesheet" href="/static/home.css">
+</head>
+
+    <h1>Pulmu is a virtual magazine and a personal project</h1>
+
+    Most recent posts:
+    {% for post in posts %}
+    <div><p> <a href="{{ url_for('show_post', slug=post.slug) }}">{{ post.title }}</a> </p></div>
+    see more posts...
+    {% endfor %}
+{% endblock %}
