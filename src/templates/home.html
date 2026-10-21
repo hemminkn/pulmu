@@ -6,11 +6,24 @@
 <link rel="stylesheet" href="/static/home.css">
 </head>
 
-    <h1>Pulmu is a virtual magazine and a personal project</h1>
+    <h1 class="headline">Pulmu is a virtual magazine and a personal project</h1>
 
-    Most recent posts:
-    {% for post in posts %}
-    <div><p> <a href="{{ url_for('show_post', slug=post.slug) }}">{{ post.title }}</a> </p></div>
-    see more posts...
-    {% endfor %}
+    <div class="displayed">
+
+        <img src="/static/imgs/noorasdayofwonder.png" alt="my day of wonder" width="500" height="700">
+
+        <div class="displayed_posts">
+            <h2 class="extra"> most recent posts: </h2>
+
+            {% for post in posts %}
+            <p>
+                <a class="links" href="{{ url_for('show_post', slug=post.slug) }}">{{ post.title }}</a>
+            </p>
+
+            {% endfor %}
+
+        <h2 class="extra"> see more posts... </h2>
+        </div>
+    </div>
+
 {% endblock %}

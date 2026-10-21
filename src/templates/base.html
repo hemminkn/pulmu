@@ -1,6 +1,9 @@
 <! doctype html>
 <html>
     <head>
+
+        <link rel="stylesheet" href="/static/base.css">
+
         {% if title %}
         <title>{{ title }} - Pulmu</title>
         {% else %}
@@ -9,10 +12,9 @@
     </head>
     <body>
         <div>
-            Pulmu: &nbsp;
-            <a href="{{ url_for('home') }}">home</a> &nbsp;
-            <a href="{{ url_for('contact') }}">contact</a> &nbsp;
-            <a href="{{ url_for('about') }}">about</a> &nbsp;
+            <a class="linkylink" href="{{ url_for('home') }}">home</a> &nbsp;
+            <a class="linkylink" href="{{ url_for('contact') }}">contact</a> &nbsp;
+            <a class="linkylink" href="{{ url_for('about') }}">about</a> &nbsp;
         </div>
         <hr> <!-- line -->
         {% block content %}{% endblock %}
