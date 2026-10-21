@@ -16,12 +16,11 @@ def home():
                 meta = json.load(f)
 
                 posts.append({"title": meta["title"], "slug": post_dir.name})
-                print(posts)
+
     return render_template("home.html", posts=posts[:4])
 
 @app.route("/contact")
 def contact():
-
     return render_template("contact.html", title="contact")
 
 @app.route("/about")
