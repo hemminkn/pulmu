@@ -10,7 +10,9 @@
     <body>
         <div>
             Pulmu:
-            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('home') }}">home</a>
+            <a href="{{ url_for('contact') }}">contact</a>
+            <a href="{{ url_for('about') }}">about</a>
         </div>
         <hr> <!-- line -->
         {% block content %}{% endblock %}
