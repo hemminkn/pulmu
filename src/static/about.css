@@ -13,6 +13,6 @@ p {
     color: palevioletred;
 }
 
-hr {
-    border: none
+.noneline {
+    border: none;
 }
